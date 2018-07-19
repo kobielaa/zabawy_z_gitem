@@ -9,8 +9,8 @@ import Popover from './popover'
 import Scrollspy from './scrollspy'
 import Tab from './tab'
 import Tooltip from './tooltip'
-import Util from './cosinnego'
-
+import Util from './zmiana jeszcz raz na developeie konflikt od features do developa'
+import Util from './dodatnie linie'
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.1.1): index.js
