@@ -1,0 +1,12 @@
+{
+    "/imian_orders.info.yml": "/imian_orders.info.yml",
+    "/imian_orders.permissions.yml": "/imian_orders.permissions.yml",
+    "/imian_orders.routing.yml": "/imian_orders.routing.yml",
+    "/imian_orders.links.menu.yml": "/imian_orders.links.menu.yml",
+    "/imian_orders.install": "/imian_orders.install",
+    "/omposer.json": "/omposer.json",
+    "/rc/Controller/OrdersController.php": "/rc/Controller/OrdersController.php",
+    "/rc/Plugin/Block/OrdersBlock.php": "/rc/Plugin/Block/OrdersBlock.php",
+    "/rc/Plugin/Block/FilterBlock.php": "/rc/Plugin/Block/FilterBlock.php",
+    "/rc/Form/OrdersForm.php": "/rc/Form/OrdersForm.php"
+}

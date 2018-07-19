@@ -1,0 +1,26 @@
+# timian.upload.run:
+#   path: /purchasers/upload/run/{userName}/{fid}/{purchasers}
+#   defaults:
+#     _controller: Drupal\timian_upload\Controller\UploadController::run
+#   requirements:
+#     _access: 'TRUE'
+#   options:
+#     no_cache: 'TRUE'
+# timian.upload.config:
+#   path: /admin/config/timian_upload
+#   defaults:
+#     _title: Timian Upload settings
+#     _form: Drupal\timian_upload\Form\UploadSettingsForm
+#   requirements:
+#     _permission: 'manage timian_upload'
+#   options:
+#     no_cache: 'TRUE'
+
+timian.orders.url.get:
+  path: /orders/url.get.json
+  defaults:
+    _controller: Drupal\timian_sso\Controller\SSOController::apiGetLoginLink
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
