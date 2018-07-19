@@ -9,7 +9,7 @@ import Popover from './popover'
 import Scrollspy from './scrollspy'
 import Tab from './tab'
 import Tooltip from './tooltip'
-import Util from './cosinnego'
+import Util from './konflikt od features do developa'
 
 /**
  * --------------------------------------------------------------------------
