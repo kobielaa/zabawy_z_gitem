@@ -1,0 +1,14 @@
+{
+  "require-dev": {
+    "drupal/coder": "^8.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/drupal/coder/coder_sniffer"
+    ],
+    "post-update-cmd": [
+      "\"vendor/bin/phpcs\" --config-set installed_paths vendor/drupal/coder/coder_sniffer"
+    ]
+  }
+}

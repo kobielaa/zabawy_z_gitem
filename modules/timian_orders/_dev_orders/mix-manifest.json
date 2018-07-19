@@ -1,0 +1,12 @@
+{
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.info.yml": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.info.yml",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.permissions.yml": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.permissions.yml",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.routing.yml": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.routing.yml",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.links.menu.yml": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.links.menu.yml",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.install": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/timian_orders.install",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/composer.json": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/composer.json",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Controller/OrdersController.php": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Controller/OrdersController.php",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Plugin/Block/OrdersBlock.php": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Plugin/Block/OrdersBlock.php",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Plugin/Block/FilterBlock.php": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Plugin/Block/FilterBlock.php",
+    "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Form/OrdersForm.php": "/C:/xampp/htdocs/timian/sites/all/modules/timian_orders/src/Form/OrdersForm.php"
+}

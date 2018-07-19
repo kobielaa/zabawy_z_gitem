@@ -1,0 +1,9 @@
+name: Timian Orders
+type: module
+description: Timian module for manage orders from all purchasers
+package: timian
+# configure: timian.upload.config
+core: 8.x
+version: '1.0'
+dependencies:
+  - timian_common
