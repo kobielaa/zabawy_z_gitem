@@ -1,0 +1,27 @@
+.block-language {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    .content {
+        display: flex;
+        .links {
+            margin-bottom: 0;
+            li {
+                display: inline-block;
+                border-right: 1px solid $color-secondary;
+                padding: 0 .5rem;
+                .language-link {
+                    text-transform: uppercase;
+                    padding: .5rem;
+                }
+                .is-active {
+                    font-weight: bold;
+                }
+            }
+            & :last-child {
+                border: none;
+                padding-right: 0;
+            }
+        }
+    }
+}

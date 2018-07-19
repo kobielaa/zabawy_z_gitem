@@ -1,0 +1,37 @@
+name : Timian
+description : 'Timian Bootstrap 4 theme.'
+type: theme
+package: Timian
+core : 8.x
+regions:
+  login: 'Login'
+  language: 'Language'
+  header: 'Header'
+  navigation: 'Navigation'
+  upcontent: 'Up Content'
+  content: 'Content'
+  subcontent: 'Sub Content'
+  content_tasks: 'Content tasks'
+  bottom_content: 'Bottom content'
+  footer_upper: 'Footer upper content'
+  footer1_content: 'Footer 1 content'
+  footer2_content: 'Footer 2 content'
+  footer3_content: 'Footer 3 content'
+  footer4_content: 'Footer 4 content'
+  footer_bottom: 'Footer bottom content'
+
+
+libraries:
+  - timian/global-styling
+  - timian/js-footer
+
+# libraries-override:
+#   # core/jquery: false
+#   core/jquery.once: false
+#   core/jquery.ui: false
+#   core/jquery-form: false
+#   core/jquery-joyride: false
+#   core/jquery-once: false
+#   core/jquery-ui-touch-punch: false
+#   core/jquery.cookie: false
+  

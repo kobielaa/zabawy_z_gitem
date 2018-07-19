@@ -1,0 +1,9 @@
+timian.common.config:
+  path: /admin/config/timian_common
+  defaults:
+    _title: Timian Common settings
+    _form: Drupal\timian_common\Form\CommonSettingsForm
+  requirements:
+    _permission: 'manage timian_common'
+  options:
+    no_cache: 'TRUE'

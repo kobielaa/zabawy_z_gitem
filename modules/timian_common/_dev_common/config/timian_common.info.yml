@@ -1,0 +1,6 @@
+name: Timian Common
+type: module
+description: Timian Common module with shared functionalities.
+package: timian
+core: 8.x
+version: '1.0'

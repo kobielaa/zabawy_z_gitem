@@ -1,0 +1,37 @@
+{
+  "folders": [
+    {
+      "path": "modules\\timian_sso\\_dev_sso"
+    },
+    {
+      "path": "modules\\timian_upload\\_dev_upload"
+    },
+    {
+      "path": "modules\\timian_common\\_dev_common"
+    },
+    {
+      "path": "themes\\timian\\_dev_theme"
+    },
+    {
+      "path": "modules\\timian_orders\\_dev_orders"
+    },
+    {
+      "path": "modules\\timian_users\\_dev_users"
+    }
+  ],
+	"settings": {
+    "phpcs.enable": true,
+    "phpcs.standard": "Drupal",
+    "files.associations": {
+      "*.module": "php",
+	    "*.theme": "php",
+	    "*.install": "php"
+    },
+    "files.exclude": {
+			"vendor": true,
+			"*lock.json": true,
+			"*.lock": true
+    },
+    "git.ignoreLimitWarning": true
+  }
+}

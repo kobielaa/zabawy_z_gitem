@@ -1,0 +1,24 @@
+{% set heading_id = attributes.id ~ ''|clean_id %}
+{% set navbar_classes = [
+  'navbar',
+  'navbar-expand-lg',
+] %}
+
+  <nav role="navigation"
+       aria-labelledby="{{ heading_id }}"{{ attributes.addClass(navbar_classes)|without('role', 'aria-labelledby') }}>
+    {# Label. If not displayed, we still provide it for screen readers. #}
+    {% if not configuration.label_display %}
+      {% set title_attributes = title_attributes.addClass('visually-hidden') %}
+    {% endif %}
+
+    <div id="{{ attributes.id }}-nav">
+
+        {# Menu. #}
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+
+    </div>
+  </nav>
+
+

@@ -1,0 +1,13 @@
+/modules/timian_sso/_dev_sso/node_modules
+/modules/timian_sso/_dev_sso/vendor
+/modules/timian_upload/_dev_upload/node_modules
+/modules/timian_upload/_dev_upload/vendor
+/themes/timian/_dev_theme/node_modules
+/themes/timian/_dev_theme/vendor
+/modules/timian_common/_dev_common/node_modules
+/modules/timian_common/_dev_common/vendor
+/modules/timian_orders/_dev_orders/node_modules
+/modules/timian_orders/_dev_orders/vendor
+/modules/timian_users/_dev_users/node_modules
+/modules/timian_users/_dev_users/vendor
+

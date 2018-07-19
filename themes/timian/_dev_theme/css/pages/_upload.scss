@@ -1,0 +1,309 @@
+//====================================================
+//  Formularz
+//====================================================
+
+.form-tab {
+  position: relative;
+  h2 {
+    width: 100%;
+    display: inline-block;
+    background: linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+    position: relative;
+    margin-bottom: 0;
+    color: white;
+    padding: 25px 50px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    @include phones {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.list-tab {
+  position: relative;
+  h3 {
+    width: 100%;
+    display: inline-block;
+    background: linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+    position: relative;
+    margin-bottom: 0;
+    color: white;
+    padding: 25px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    @include phones {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+#tu-files_wrapper {
+  overflow-x: auto;
+}
+
+#tu-files_filter {
+  width: 100%;
+  text-align: center;
+  padding: 0 20px 25px 20px;
+  background: linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+  background: -webkit-linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+  background: -moz-linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+  background: -o-linear-gradient(90deg, #3724d7, rgba(0, 255, 161, 0.5));
+  label {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  input {
+    border: none;
+  }
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: 0px !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  margin-top: 0;
+}
+
+#tu-files_length {
+  line-height: 46px;
+  padding-left: 20px;
+  label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  select {
+    margin: 0 5px;
+  }
+}
+
+#tu-files_paginate {
+  padding-right: 20px;
+  a {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  span a {
+    font-weight: 400;
+    .current {
+      background: none;
+
+    }
+  }
+
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  border: 1px solid orange !important;
+  background: #fefefe;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: 1px solid orange;
+  background: orange;
+}
+
+.bottom {
+  overflow: hidden;
+}
+
+//====================================================
+// Progress Bars
+//====================================================
+.progress {
+  height: 25px;
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: orange;
+}
+
+#progress-wrapper {
+  position: relative;
+  width: 100%;
+  .desc_bar {
+    display: flex;
+  }
+  p {
+    padding-bottom: 15px;
+  }
+  .progress {
+    background-color: #f4f4f4;
+  }
+}
+
+.single-progress-wrapper {
+  background-color: white;
+  width: 100%;
+  padding: 50px;
+  @include phones {
+    padding: 30px 15px;
+  }
+}
+
+//====================================================
+// CHECKBOXES
+//====================================================
+#edit-purchasers-upload, #edit-purchasers-insert {
+  max-height: 100px;
+  overflow: auto;
+
+}
+#timian-upload-form .col-md-12 {
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#timian-upload-form .checkboxes-wrapper,#timian-upload-form .checkboxes-wrapper-insert {
+  display: none;
+  label {
+    margin-bottom:  .5rem;
+  }
+  legend {
+    span {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #ff975e;
+
+    }
+  }
+  input[placeholder="Click to choose"] {
+    width: 150px !important;
+  }
+
+  .option {
+    margin: 10px 0 0 0 !important;
+  }
+}
+
+#edit-check-all {
+  label {
+    margin: 10px 0 10px 0 !important;
+  }
+}
+
+// #ajax-wrapper {
+//   label {
+//     font-size: 13px !important;
+//     color: #ff975e;
+//   }
+// }
+
+#timian-upload-form .js-form-item-upload-type label {
+  font-size: 13px;
+  color: #ff975e;
+}
+
+
+.timian-purchasers h1 {
+  margin: 50px 0 75px 0;
+}
+
+//====================================================
+// Loader for purchaser list
+//====================================================
+
+.loader-wrapper-purchasers {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  .loader-purchasers {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid orange;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
+  }
+}
+
+.lack-permission-notification {
+  color: gray !important;
+  text-align: center;
+  padding: 34px 0 0 0;
+  @include tablets{
+    padding: 34px 0 10px 0;
+  }
+  font-weight: normal !important;
+}
+
+
+.wrapper-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  select[name="upload_type"],  input[type="file"]{
+    height: 59px;
+  }
+  input[type="file"] {
+    line-height: 33px;
+    &:placeholder {
+      color: gray;
+    }
+  }
+  // select[name="upload_type"]{
+  //   display: block;
+  //   option{
+  //     font-weight: normal;
+  //     display: block;
+  //     white-space: pre;
+  //     min-height: 1.2em;
+  //     padding: 0px 2px 1px;
+  //   }
+
+
+  // }
+}
+
+#edit-actions {
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select2-selection{
+  max-height: 80px;
+  overflow: auto;
+}
+
+.download-schema {
+  align-self: flex-end;
+  a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    @include phones{
+      display: block;
+      margin-top: 6px;
+    }
+    i {
+      font-size: 15px;
+      color: orange;
+    }
+    &:hover {
+      color:orange;
+    }
+
+  }
+}

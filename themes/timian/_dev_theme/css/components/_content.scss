@@ -1,0 +1,11 @@
+article {
+    .container {
+        padding: 0;
+        .region-content {
+            min-height: 12.5rem;
+            .block {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<?php
+
+/**
+ * @file
+ * Process and preprocess for theme.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Url;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for template variables.
+ */
+function timian_preprocess_html(&$variables) {
+  $variables['attributes']['class'][] = \Drupal::service('path.matcher')->isFrontPage() ? 'front' : 'not-front';
+  $variables['attributes']['class'][] = \Drupal::currentUser()->isAuthenticated() ? 'logged-in' : 'not-logged-in';
+  // Try to get the node, so we can check if we're on the node page.
+  $node = Drupal::request()->attributes->get('node');
+  if ($node) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+  else {
+    $variables['attributes']['class'][] = 'page';
+  }
+}
+
+/**
+ * Implements hook_css_alter() for CSS manipulations.
+ */
+// function timian_css_alter(&$css, AttachedAssetsInterface $assets) {
+//   // Add Google fonts.
+//   $fonts = ['https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'];
+//   foreach ($fonts as $font) {
+//     $css[$font] = [
+//       'data' => $font,
+//       'type' => 'external',
+//       'every_page' => TRUE,
+//       'media' => 'all',
+//       'preprocess' => FALSE,
+//       'group' => CSS_AGGREGATE_THEME,
+//       'browsers' => ['IE' => TRUE, '!IE' => TRUE],
+//     ];
+//   }
+
+// }
+
+/**
+ * Implements hook_blog_preprocess_page().
+ */
+function timian_preprocess_page(&$variables) {
+  $site_name = isset($variables['site_name']) ? $variables['site_name'] : \Drupal::config('system.site')->get('name');
+  $site_slogan = isset($variables['site_slogan']) ? $variables['site_slogan'] : \Drupal::config('system.site')->get('slogan');
+  $variables['display_submitted'] = FALSE;
+  $variables['timian_photo_miniature'] = theme_get_setting('timian_photo_miniature');
+  $url = Url::fromUri('http://outline-studio.pl');
+  $url->setOptions(
+    [
+      'attributes' => [
+        'target' => [
+          'blank',
+        ]
+      ]
+    ]
+  );
+  $variables['copyrights'] = t('Timian Software ehf. Laugavegi 178, 105 Reykjavík, 517 7030    <a href="http://www.timian.is/">www.timian.is</a> <a href="mailto:timian@timian.is">timian@timian.is</a> © 2018');
+
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $node_type = $node->type->entity;
+    $variables['date'] = \Drupal::service('date.formatter')->format($node->getCreatedTime());
+    $variables['author_name'] = $node->getOwner()->getAccountName();
+    $variables['display_submitted'] = $node_type->displaySubmitted();
+  }
+
+}
+
+/**
+ * Implements hook_blog_preprocess_region().
+ */
+function timian_preprocess_region(&$variables) {
+  // 8 stands for aditional drupal elements.
+  $blocksCount = count($variables['elements']) - 8;
+  // Create the $content variable that templates expect.
+  $variables['content'] = $variables['elements']['#children'];
+  $variables['region'] = $variables['elements']['#region'];
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function timian_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  $styles = \Drupal::entityTypeManager()->getStorage('image_style')->loadMultiple();
+  $values = [];
+  foreach ($styles as $style) {
+    array_push($values, [$style->get('name') => $style->get('label')]);
+  }
+  $form['timian_photo_miniature'] = [
+    '#type'           => 'select',
+    '#title'          => t('Photo miniature style'),
+    '#default_value'  => theme_get_setting('timian_photo_miniature'),
+    '#description'    => t('Select image style for displaying photo miniatures on pages.'),
+    '#options'        => $values,
+  ];
+  $form['timian_facebook_account'] = [
+    '#type'           => 'textfield',
+    '#title'          => t('Facebook account name'),
+    '#default_value'  => theme_get_setting('timian_facebook_account'),
+    '#description'    => t('EnterFacebook account name, that will be rendered into Facebook link .'),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_links__language_block().
+ */
+function timian_preprocess_links__language_block(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage();
+  $variables['language'] = $language;
+  $variables['timian_facebook_account'] = theme_get_setting('timian_facebook_account');
+
+  foreach ($variables['links'] as $i => $link) {
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->get('id');
+  }
+}

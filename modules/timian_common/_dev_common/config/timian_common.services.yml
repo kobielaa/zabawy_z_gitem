@@ -1,0 +1,3 @@
+services:
+  timian_common.purchasers:
+    class: Drupal\timian_common\Service\CommonService

@@ -1,0 +1,5 @@
+timian.common.settings:
+  title: 'Timian Common settings'
+  parent: system.admin_config_services
+  description: 'Admin settings page link'
+  route_name: timian.common.config

@@ -1,0 +1,21 @@
+{% if (attributes['type'].__toString() == 'file') %}
+ 
+ {%
+  set classes = [
+    'form-select',
+    'required'
+  ]
+%}
+  <input{{  attributes.addClass(classes).setAttribute('aria-required','true').setAttribute('required','required')}} />
+
+{% elseif (attributes['id'].__toString() == 'edit-check-all-0' ) %}
+ <input{{  attributes.addClass(classes).setAttribute('data-toggle','tooltip').setAttribute(' data-placement','top').setAttribute('title','Please select at least one purchaser')}} />
+
+{% elseif ( attributes['id'].__toString() == 'edit-check-all-insert-0') %}
+ <input{{  attributes.addClass(classes).setAttribute('data-toggle','tooltip').setAttribute(' data-placement','top').setAttribute('title','Please select at least one purchaser')}} />
+
+{% else %}
+
+  <input{{ attributes }} />{{ children }}
+
+{% endif %}

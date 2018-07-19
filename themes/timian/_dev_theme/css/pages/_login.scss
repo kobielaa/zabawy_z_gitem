@@ -1,0 +1,67 @@
+//====================================================
+//  login page
+//====================================================
+
+#block-timian-local-tasks {
+  nav {
+    padding-bottom: 50px;
+    li {
+      a {
+        padding-left: 15px;
+        text-decoration: none;
+        transition: 500ms;
+        &:hover {
+          color: $color-light;
+        }
+      }
+    }
+  }
+}
+
+#block-timian-content {
+  .content {
+    position: relative;
+    .user-login-form {
+      display: inline-block;
+      text-align: center;
+      width: 500px;
+      position: absolute;
+      left: 50%;
+      margin-left: -250px;
+      input {
+        padding: 10px;
+        border: 1px solid #e6d3d3;
+      }
+      #edit-submit {
+        padding: 12px 38px;
+        border: 1px solid #3E29EF;
+      }
+
+      @include phones {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+      }
+      .js-form-item {
+        padding-bottom: 25px;
+        input {
+          width: 100%;
+        }
+        .description {
+          font-size: 12px;
+          color: grey;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+#block-timian-content {
+  overflow: -webkit-paged-x;
+}
+.user-login-form{
+  #edit-actions {
+    justify-content: center;
+  }
+}

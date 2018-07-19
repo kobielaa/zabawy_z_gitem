@@ -1,0 +1,29 @@
+/* =======================================================================
+## ++ Media Queries
+========================================================================== */
+
+/*
+    Used for media queries.
+    Add these mixins in your normal scss flow.
+
+    Eg.
+    .container{
+        width:1024px;
+
+        @include tablets{
+            width:90%;
+        }
+    }
+*/
+
+@mixin lowersmonitors{
+  @media screen and (max-width: 1200px){ @content;}
+}
+
+@mixin tablets{
+  @media screen and (max-width: 992px){ @content; }
+}
+
+@mixin phones{
+  @media screen and (max-width: 768px){ @content; }
+}

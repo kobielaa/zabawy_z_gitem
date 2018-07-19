@@ -1,0 +1,205 @@
+.users-form-wrapper {
+  width: 100%;
+
+  .form-section {
+    margin: 25px 0px;
+    background: white;
+    border: 1px solid #E3E7E9;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    h6 {
+      font-size: 15px;
+      color: #ff975e;
+      padding-left: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      @include phones {
+        padding-left: 0px;
+        }
+    }
+    .select-supplier {
+      font-size: 20px;
+    }
+    div {
+      flex-grow: 1;
+      display: flex;
+      @include phones {
+        flex-direction: column;
+      }
+      div {
+
+        .description {
+          font-size: 11px;
+          color: grey;
+        }
+      }
+      input, select {
+        width: 100%;
+        padding: 10px 10px;
+        border: 1px solid #E3E7E9;
+        border-radius: 2px;
+        margin: 20px;
+        @include phones {
+         margin: 20px 0;
+        }
+      }
+
+    }
+
+  }
+  .row {
+    transition: 500ms all;
+  }
+  
+  input[type=submit] {
+    margin: auto !important;
+  }
+  .row-wrapper {
+    width: 100%;
+    display: flex;
+    div {
+      width:50%;;
+      display: flex;
+      @include phones {
+        width: 100%;
+      }
+    }
+  }
+  .input-with-description {
+    div {
+      display: block;
+      padding: 0 20px;
+      @include phones {
+      padding:0
+      }
+      input {
+        margin: 20px 0;
+
+      }
+      div {
+        padding: 0;
+        color: #E3E7E9;
+        margin-top: -13px;
+        padding-left: 5px;
+      }
+    }
+  }
+  
+.select2-container {
+    padding: 0 20px;
+    margin: 20px 0;
+   @include phones {
+     padding:0;
+   }
+  }
+}
+
+
+#edit-supplier {
+  display: none;
+}
+
+//tab navigation
+.tab-navigation {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  div {
+    width: 50%;
+    text-align: center;
+    padding: 20px 10px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    border-top: 7px solid #3e29ef;
+
+    border-left: 7px solid #3e29ef;
+    background-color: #3e29ef;
+
+  }
+  .tab-left {
+    border-left: 7px solid #3e29ef;
+    @include phones {
+        border-left: 4px solid #3e29ef;
+    }
+  }
+  .tab-right {
+    border-right: 7px solid #3e29ef;
+  }
+  .active-tab {
+    background-color: white;
+    color: #3e29ef;
+  }
+
+  .my-tab {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .my-tab:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .my-tab:hover, .my-tab:focus, .my-tab:active {
+    color: #3e29ef;
+
+  }
+  .my-tab:hover:before, .my-tab:focus:before, .my-tab:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+.submit-button {
+  padding: 10px 30px;
+  display: inline-block;
+  background-color: #3E29EF;
+  color: white;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 600;
+  cursor: pointer;
+  border: 1px solid #3E29EF;
+  margin-top: 20px;
+}
+
+#supplier-submit {
+  position: relative;
+  left: calc(50% - 90px);
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+    position: relative;
+    top: -17px;
+    padding-left: 5px;
+}

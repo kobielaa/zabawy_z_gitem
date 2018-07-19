@@ -1,0 +1,11 @@
+{
+    "/imian_common.info.yml": "/imian_common.info.yml",
+    "/imian_common.links.menu.yml": "/imian_common.links.menu.yml",
+    "/imian_common.permissions.yml": "/imian_common.permissions.yml",
+    "/imian_common.routing.yml": "/imian_common.routing.yml",
+    "/imian_common.services.yml": "/imian_common.services.yml",
+    "/omposer.json": "/omposer.json",
+    "/rc/Service/CommonService.php": "/rc/Service/CommonService.php",
+    "/rc/Form/CommonSettingsForm.php": "/rc/Form/CommonSettingsForm.php",
+    "/rc/Controller/CommonController.php": "/rc/Controller/CommonController.php"
+}

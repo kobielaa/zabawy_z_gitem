@@ -1,0 +1,56 @@
+footer {
+  color: white;
+  margin-top: 50px;
+  position: relative;
+  background-color: #3E29EF;
+  padding: 2rem;
+  .container {
+    #block-copyrights {
+      width: 100%;
+      a {
+        color: $color-light;
+        &:hover {
+          color: $color-dark;
+        }
+      }
+    }
+  }
+}
+
+.footer-logo-wrapper {
+  text-align: center;
+  .container {
+    padding: 0;
+  }
+  img {
+    width: 70px;
+    padding-bottom: 25px;
+  }
+}
+
+.copyrights {
+
+  text-align: center;
+  @include tablets {
+    margin-top: 15px;
+  }
+}
+
+.info-list {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  @include tablets {
+    display: block;
+    text-align: center;
+  }
+
+  li {
+    float: left;
+    padding-left: 15px;
+    @include tablets {
+      float: none;
+      padding-left: 0;
+    }
+  }
+}
