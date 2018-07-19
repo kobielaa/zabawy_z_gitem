@@ -9,7 +9,7 @@ import Popover from './popover'
 import Scrollspy from './scrollspy'
 import Tab from './tab'
 import Tooltip from './tooltip'
-import Util from './util'
+import Util from './cosinnego'
 
 /**
  * --------------------------------------------------------------------------
